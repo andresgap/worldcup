@@ -1,0 +1,61 @@
+<header class="nav-header">
+  <nav id="navbar-top" class="navbar navbar-default">
+    <div class="container">
+      <div class="row">
+        <div class="navbar-header">
+          <%= link_to(root_path, class: 'navbar-brand') do %>
+            <%= image_tag('logo.png', alt: 'logo', class: 'img-responsive logo') %>
+          <% end %>
+        </div>
+        <div id="header-menu" class="navbar-right">
+          <% if user_signed_in? %>
+            <%= image_tag(current_user.picture, alt: 'picture', class: 'user-img') %>
+            <span class="user-name">
+              <%= current_user.name %> |
+              <%= link_to('Log Out', destroy_user_session_path, method: :delete) %>
+            </span>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <nav id="navbar-menu" class="navbar navbar-default">
+    <div class="container">
+      <div class="row">
+        <% if user_signed_in? %>
+          <ul class="nav navbar-nav">
+            <li class="<%= 'active' if @active_page == 'predictions' %>">
+              <%= link_to('Predictions', predictions_path) %>
+            </li>
+            <li class="<%= 'active' if @active_page == 'groups' %>">
+              <%= link_to('Groups', groups_index_path) %>
+            </li>
+            <li class="<%= 'active' if @active_page == 'leaderboards' %>">
+              <%= link_to('Leaderboards', leaderboards_path) %>
+            </li>
+            <li class="<%= 'active' if @active_page == 'faq' %>">
+              <%= link_to('FAQ', faq_index_path) %>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <% if current_user.admin? %>
+              <li class="<%= 'active' if @active_page == 'admin' %>">
+                <%= link_to('Admin', admin_matches_path) %>
+              </li>
+            <% end %>
+            <li class="<%= 'active' if @active_page == 'manage' %>">
+              <%= link_to manage_leaderboards_path do %>
+                <span class="glyphicon glyphicon-cog"></span>
+                <% if current_user.invitations.size > 0 %>
+                  <sup class="invitations-warning">
+                    <%= current_user.invitations.size %>
+                  </sup>
+                <% end %>
+              <% end %>
+            </li>
+          </ul>
+        <% end %>
+      </div>
+    </div>
+  </nav>
+</header>

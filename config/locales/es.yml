@@ -1,0 +1,25 @@
+
+es:
+  title: "Quiniela"
+  error:
+    unauthorized: "Acceso Denegado"
+
+  form:
+    error: "Hay errores actualizando sus predicciones."
+    sucess: "Predicciones actualizadas!"
+
+  team:
+    jes: "Jesus"
+    kev: "Kevin"
+    and: "Andrey"
+    bry: "bryan"
+    edu: "Eduny"
+    jos: "Josema"
+    est: "Esteban"
+    mar: "Marcs"
+
+  phase:
+    quarter_finals: "Cuartos de Final"
+    semi_finals: "Semi-Finales"
+    third_place: "Tercer Lugar"
+    final: "Final"

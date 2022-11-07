@@ -1,0 +1,77 @@
+<%= form_for [:admin, match], remote: true, html: { style: 'display:inline;' } do |f| %>
+  <div class="modal-body">
+    <div class="errors"></div>
+    <div class="row">
+      <div class="form-group col-sm-2">
+        <span class="control-label">Match: <%= match.number %></span>
+      </div>
+      <div class="form-group col-sm-5">
+        <span class="control-label">Date: <%= local_time(match.date, :long)%></span>
+      </div>
+      <div class="form-group col-sm-5">
+        <span class="control-label">Phase: <%= match.phase.name %></span>
+      </div>
+    </div>
+    <% if match.phase.level == 1 %>
+      <div class="row">
+        <div class="form-group col-sm-2">
+          <span>Score: </span>
+        </div>
+        <div class="form-group col-sm-5">
+          <span class="control-label"><%= match.team1.name %></span>
+          <%= f.number_field :team1_score, maxlength: 2, min: 0, max: 99, class: 'score' %>
+        </div>
+        <div class="form-group col-sm-5">
+          <span class="control-label"><%= match.team2.name %></span>
+          <%= f.number_field :team2_score, maxlength: 2, min: 0, max: 99, class: 'score' %>
+        </div>
+      </div>
+    <% else %>
+      <div class="row">
+        <div class="form-group col-sm-2">
+          <span>Teams:</span>
+        </div>
+        <div class="form-group col-sm-5">
+          <%= f.collection_select(:team1_id, teams, :id, :name,
+            { include_blank: true }, { class: ' team-selector' }) %>
+        </div>
+        <div class="form-group col-sm-5">
+          <%= f.collection_select(:team2_id, teams, :id, :name,
+            { include_blank: true }, { class: ' team-selector' }) %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group col-sm-2">
+          <span>Labels: </span>
+        </div>
+        <div class="form-group col-sm-5">
+          <%= f.text_field :team1_label %>
+        </div>
+        <div class="form-group col-sm-5">
+          <%= f.text_field :team2_label %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group col-sm-2">
+          <span>Score: </span>
+        </div>
+        <div class="form-group col-sm-5">
+          <span class="control-label">Team 1</span>
+          <%= f.number_field :team1_score, maxlength: 2, min: 0, max: 99, class: 'score' %>
+        </div>
+        <div class="form-group col-sm-5">
+          <span class="control-label">Team 2</span>
+          <%= f.number_field :team2_score, maxlength: 2, min: 0, max: 99, class: 'score' %>
+        </div>
+      </div>
+    <% end %>
+    <div class="form-group">
+      <%= f.check_box :ready %>
+      <%= f.label :ready, 'Points updated?', class: 'control-label' %>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <%= f.submit class: 'btn btn-primary' %>
+    <%= link_to 'Cancel', '#', class: 'btn btn-default', data: { dismiss: 'modal' } %>
+  </div>
+<% end %>

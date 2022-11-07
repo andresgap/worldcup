@@ -1,0 +1,55 @@
+<%
+  closed = prediction.match.closed?
+  number = prediction.match.number
+%>
+
+<tr class="prediction-row <%= 'closing' if prediction.match.last_hour? %>">
+  <td data-toggle="collapse" id="row<%= number %>" data-target=".row<%= number %>"
+    class="chevron">
+    <span class="glyphicon glyphicon-menu-down"></span>
+  </td>
+  <td class="text-center">
+    <%= number %>
+  </td>
+  <td>
+    <%= local_time(prediction.match.date, :long) %>
+    <% if prediction.match.phase.level == 1 %>
+      (<%= prediction.match.phase.name %>)
+    <% end %>
+  </td>
+  <td class="text-right">
+    <% if prediction.match.team1 %>
+      <span class="hidden-sm hidden-xs"><%= prediction.match.team1.name %></span>
+      <%= image_tag(prediction.match.team1.flag, class: 'flag') %>
+    <% else %>
+      <span><%= prediction.match.team1_label %></span>
+      <%= image_tag('flags/none.png', class: 'flag') %>
+    <% end %>
+    <%= f.number_field :score1, maxlength: 2, min: 0, max: 99, class: 'score', disabled: closed %>
+  </td>
+  <td class="text-center score-label"><%= prediction.match.score_label %></td>
+  <td>
+    <%= f.number_field :score2, maxlength: 2, min: 0, max: 99, class: 'score', disabled: closed %>
+    <% if prediction.match.team2 %>
+      <%= image_tag(prediction.match.team2.flag, class: 'flag') %>
+      <span class="hidden-sm hidden-xs"><%= prediction.match.team2.name %></span>
+    <% else %>
+      <%= image_tag('flags/none.png', class: 'flag') %>
+      <span><%= prediction.match.team2_label %></span>
+    <% end %>
+  </td>
+  <td class="text-center points">
+    <%= prediction.points %>
+    <% if prediction.points.present? %>
+      <span class="<%= points_color(prediction.points) %>">
+        <span class="glyphicon glyphicon-<%= points_icon(prediction.points, prediction.match.phase) %>"></span>
+      </span>
+    <% end %>
+  </td>
+</tr>
+
+<tr class="collapse row<%= number %>">
+  <td colspan="7" class="stats">
+    <%= render 'stats', stats: stats[prediction.match.number], match: prediction.match %>
+  </td>
+</tr>

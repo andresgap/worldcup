@@ -1,0 +1,38 @@
+<% phases = [] %>
+
+<div class="container page">
+  <h2 class="title">My Predictions (<%= @prediction_set.points %> points)</h2>
+
+  <div class="row" id="predictions-list">
+    <div class="col-sm-12">
+      <%= form_for(@prediction_set, url: prediction_path(@prediction_set), method: :put) do |f| %>
+        <table id="predictions-table" class="table table-hover">
+          <thead>
+            <th></th>
+            <th class="text-center">Number</th>
+            <th>Date</th>
+            <th class="text-right">Team 1</th>
+            <th class="text-center">vs</th>
+            <th>Team 2</th>
+            <th class="text-center">Points</th>
+          </thead>
+          <tbody>
+            <%= f.fields_for :predictions do |fp| %>
+              <% if fp.object.match.phase.level > 1 && !phases.include?(fp.object.match.phase.level) %>
+                <% phases << fp.object.match.phase.level %>
+                <tr>
+                  <td colspan="8" class="phase-title"><%= fp.object.match.phase.name %></td>
+                </tr>
+              <% end %>
+              <%= render 'prediction', f: fp, prediction: fp.object, stats: @stats %>
+            <% end %>
+          </tbody>
+        </table>
+        <div class="row text-center">
+          <%= f.submit 'Update Predictions', class: 'btn btn-primary btn-lg submit-button' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,392 @@
+admins:
+  - email: 'andrez47@gmail.com'
+  - email: 'ahernandez@growthaccelerationpartners.com'
+phases:
+  - code: 'A'
+    level: 1
+    small_points: 1
+    big_points: 3
+    active: true
+  - code: 'B'
+    level: 1
+    small_points: 1
+    big_points: 3
+    active: true
+  - code: 'C'
+    level: 1
+    small_points: 1
+    big_points: 3
+    active: true
+  - code: 'D'
+    level: 1
+    small_points: 1
+    big_points: 3
+    active: true
+  - code: 'E'
+    level: 1
+    small_points: 1
+    big_points: 3
+    active: true
+  - code: 'F'
+    level: 1
+    small_points: 1
+    big_points: 3
+    active: true
+  - code: 'G'
+    level: 1
+    small_points: 1
+    big_points: 3
+    active: true
+  - code: 'H'
+    level: 1
+    small_points: 1
+    big_points: 3
+    active: true
+  - code: 'round_of_16'
+    level: 2
+    small_points: 2
+    big_points: 5
+    active: false
+  - code: 'quarter_finals'
+    level: 3
+    small_points: 3
+    big_points: 7
+    active: false
+  - code: 'semi_finals'
+    level: 4
+    small_points: 4
+    big_points: 9
+    active: false
+  - code: 'third_place'
+    level: 5
+    small_points: 5
+    big_points: 11
+    active: false
+  - code: 'final'
+    level: 6
+    small_points: 6
+    big_points: 13
+    active: false
+teams:
+  - code: 'arg'
+    group: 'C'
+  - code: 'aus'
+    group: 'D'
+  - code: 'bel'
+    group: 'F'
+  - code: 'bra'
+    group: 'G'
+  - code: 'can'
+    group: 'F'
+  - code: 'cmr'
+    group: 'G'
+  - code: 'crc'
+    group: 'E'
+  - code: 'cro'
+    group: 'F'
+  - code: 'den'
+    group: 'D'
+  - code: 'ecu'
+    group: 'A'
+  - code: 'eng'
+    group: 'B'
+  - code: 'esp'
+    group: 'E'
+  - code: 'fra'
+    group: 'D'
+  - code: 'ger'
+    group: 'E'
+  - code: 'gha'
+    group: 'H'
+  - code: 'irn'
+    group: 'B'
+  - code: 'jpn'
+    group: 'E'
+  - code: 'kor'
+    group: 'H'
+  - code: 'ksa'
+    group: 'C'
+  - code: 'mar'
+    group: 'F'
+  - code: 'mex'
+    group: 'C'
+  - code: 'ned'
+    group: 'A'
+  - code: 'pol'
+    group: 'C'
+  - code: 'por'
+    group: 'H'
+  - code: 'qat'
+    group: 'A'
+  - code: 'sen'
+    group: 'A'
+  - code: 'srb'
+    group: 'G'
+  - code: 'sui'
+    group: 'G'
+  - code: 'tun'
+    group: 'D'
+  - code: 'uru'
+    group: 'H'
+  - code: 'usa'
+    group: 'B'
+  - code: 'wal'
+    group: 'B'
+
+matches:
+  - date: '2022-11-20 19:00 MSK'
+    team1: qat
+    team2: ecu
+    phase: A
+  - date: '2022-11-21 19:00 MSK'
+    team1: sen
+    team2: ned
+    phase: A
+  - date: '2022-11-21 16:00 MSK'
+    team1: eng
+    team2: irn
+    phase: B
+  - date: '2022-11-21 22:00 MSK'
+    team1: usa
+    team2: wal
+    phase: B
+  - date: '2022-11-22 22:00 MSK'
+    team1: fra
+    team2: aus
+    phase: D
+  - date: '2022-11-22 16:00 MSK'
+    team1: den
+    team2: tun
+    phase: D
+  - date: '2022-11-22 19:00 MSK'
+    team1: mex
+    team2: pol
+    phase: C
+  - date: '2022-11-22 13:00 MSK'
+    team1: arg
+    team2: ksa
+    phase: C
+  - date: '2022-11-23 22:00 MSK'
+    team1: bel
+    team2: can
+    phase: F
+  - date: '2022-11-23 19:00 MSK'
+    team1: esp
+    team2: crc
+    phase: E
+  - date: '2022-11-23 16:00 MSK'
+    team1: ger
+    team2: jpn
+    phase: E
+  - date: '2022-11-23 13:00 MSK'
+    team1: mar
+    team2: cro
+    phase: F
+  - date: '2022-11-24 13:00 MSK'
+    team1: sui
+    team2: cmr
+    phase: G
+  - date: '2022-11-24 16:00 MSK'
+    team1: uru
+    team2: kor
+    phase: H
+  - date: '2022-11-24 19:00 MSK'
+    team1: por
+    team2: gha
+    phase: H
+  - date: '2022-11-24 22:00 MSK'
+    team1: bra
+    team2: srb
+    phase: G
+  - date: '2022-11-25 13:00 MSK'
+    team1: wal
+    team2: irn
+    phase: B
+  - date: '2022-11-25 16:00 MSK'
+    team1: qat
+    team2: sen
+    phase: A
+  - date: '2022-11-25 19:00 MSK'
+    team1: ned
+    team2: ecu
+    phase: A
+  - date: '2022-11-25 22:00 MSK'
+    team1: eng
+    team2: usa
+    phase: B
+  - date: '2022-11-26 13:00 MSK'
+    team1: tun
+    team2: aus
+    phase: D
+  - date: '2022-11-26 16:00 MSK'
+    team1: pol
+    team2: ksa
+    phase: C
+  - date: '2022-11-26 19:00 MSK'
+    team1: fra
+    team2: den
+    phase: D
+  - date: '2022-11-26 22:00 MSK'
+    team1: arg
+    team2: mex
+    phase: C
+  - date: '2022-11-27 13:00 MSK'
+    team1: jpn
+    team2: crc
+    phase: E
+  - date: '2022-11-27 16:00 MSK'
+    team1: bel
+    team2: mar
+    phase: F
+  - date: '2022-11-27 19:00 MSK'
+    team1: cro
+    team2: can
+    phase: F
+  - date: '2022-11-27 22:00 MSK'
+    team1: esp
+    team2: ger
+    phase: E
+  - date: '2022-11-28 13:00 MSK'
+    team1: cmr
+    team2: srb
+    phase: G
+  - date: '2022-11-28 16:00 MSK'
+    team1: kor
+    team2: gha
+    phase: H
+  - date: '2022-11-28 19:00 MSK'
+    team1: bra
+    team2: sui
+    phase: G
+  - date: '2022-11-28 22:00 MSK'
+    team1: por
+    team2: uru
+    phase: H
+  - date: '2022-11-29 22:00 MSK'
+    team1: wal
+    team2: eng
+    phase: B
+  - date: '2022-11-29 22:00 MSK'
+    team1: irn
+    team2: usa
+    phase: B
+  - date: '2022-11-29 18:00 MSK'
+    team1: ecu
+    team2: sen
+    phase: A
+  - date: '2022-11-29 18:00 MSK'
+    team1: ned
+    team2: qat
+    phase: A
+  - date: '2022-11-30 18:00 MSK'
+    team1: aus
+    team2: den
+    phase: D
+  - date: '2022-11-30 18:00 MSK'
+    team1: tun
+    team2: fra
+    phase: D
+  - date: '2022-11-30 22:00 MSK'
+    team1: pol
+    team2: arg
+    phase: C
+  - date: '2022-11-30 22:00 MSK'
+    team1: ksa
+    team2: mex
+    phase: C
+  - date: '2022-12-01 18:00 MSK'
+    team1: cro
+    team2: bel
+    phase: F
+  - date: '2022-12-01 18:00 MSK'
+    team1: can
+    team2: mar
+    phase: F
+  - date: '2022-12-01 22:00 MSK'
+    team1: jpn
+    team2: esp
+    phase: E
+  - date: '2022-12-01 22:00 MSK'
+    team1: crc
+    team2: ger
+    phase: E
+  - date: '2022-12-02 18:00 MSK'
+    team1: gha
+    team2: uru
+    phase: H
+  - date: '2022-12-02 18:00 MSK'
+    team1: kor
+    team2: por
+    phase: H
+  - date: '2022-12-02 22:00 MSK'
+    team1: srb
+    team2: sui
+    phase: G
+  - date: '2022-12-02 22:00 MSK'
+    team1: cmr
+    team2: bra
+    phase: G
+  - date: '2022-12-03 18:00 MSK'
+    phase: round_of_16
+    team1_label: 1A
+    team2_label: 2B
+  - date: '2022-12-03 22:00 MSK'
+    phase: round_of_16
+    team1_label: 1C
+    team2_label: 2D
+  - date: '2022-12-04 22:00 MSK'
+    phase: round_of_16
+    team1_label: 1B
+    team2_label: 2A
+  - date: '2022-12-04 18:00 MSK'
+    phase: round_of_16
+    team1_label: 1D
+    team2_label: 2C
+  - date: '2022-12-05 18:00 MSK'
+    phase: round_of_16
+    team1_label: 1E
+    team2_label: 2F
+  - date: '2022-12-05 22:00 MSK'
+    phase: round_of_16
+    team1_label: 1G
+    team2_label: 2H
+  - date: '2022-12-06 18:00 MSK'
+    phase: round_of_16
+    team1_label: 1F
+    team2_label: 2E
+  - date: '2022-12-06 22:00 MSK'
+    phase: round_of_16
+    team1_label: 1H
+    team2_label: 2G
+  - date: '2022-12-09 22:00 MSK'
+    phase: quarter_finals
+    team1_label: W49
+    team2_label: W50
+  - date: '2022-12-09 18:00 MSK'
+    phase: quarter_finals
+    team1_label: W53
+    team2_label: W54
+  - date: '2022-12-10 22:00 MSK'
+    phase: quarter_finals
+    team1_label: W51
+    team2_label: W52
+  - date: '2022-12-10 18:00 MSK'
+    phase: quarter_finals
+    team1_label: W55
+    team2_label: W56
+  - date: '2022-12-13 22:00 MSK'
+    phase: semi_finals
+    team1_label: W57
+    team2_label: W58
+  - date: '2022-12-14 22:00 MSK'
+    phase: semi_finals
+    team1_label: W59
+    team2_label: W60
+  - date: '2022-12-17 18:00 MSK'
+    phase: third_place
+    team1_label: L61
+    team2_label: L62
+  - date: '2022-12-18 18:00 MSK'
+    phase: final
+    team1_label: W61
+    team2_label: W62

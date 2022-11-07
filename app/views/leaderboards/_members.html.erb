@@ -1,0 +1,25 @@
+<%= form_for(:users, url: members_confirm_leaderboard_path(leaderboard), remote: true) do |f| %>
+<div class="modal-header">
+  <button type="button" class="close" data-dismiss="modal">&times;</button>
+  <h4 class="modal-title">Manage Members</h4>
+</div>
+<div class="modal-body">
+  <div class="errors"></div>
+  <ol id="leadearboard-members-table-<%= leaderboard.id %>" width="100%">
+    <% leaderboard.users.each do |user| %>
+      <% if leaderboard.owner == user %>
+        <li><%= user.name %> (Owner)</li>
+      <% else %>
+        <li>
+          <%= f.check_box :ids, { multiple: true }, user.id, false %>
+          <%= user.name %>
+        </li>
+      <% end %>
+    <% end %>
+  </ol>
+</div>
+<div class="modal-footer">
+  <%= link_to 'Close', '#', class: 'btn btn-default', data: { dismiss: 'modal' } %>
+  <%= f.submit 'Remove members', class: 'btn btn-danger' %>
+</div>
+<% end %>

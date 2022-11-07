@@ -1,0 +1,35 @@
+<div class="container page">
+  <h2>
+    <span>Leaderboards</span>
+  </h2>
+
+  <ul class="nav nav-tabs">
+    <li class="nav-item active">
+      <a class="nav-link" data-toggle="tab" href="#panel-general" role="tab">General</a>
+    </li>
+    <% @boards.each do |board| %>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#panel-<%= board.title.parameterize %>" role="tab">
+          <%= board.title %>
+        </a>
+      </li>
+    <% end %>
+    <li class="nav-item pull-right">
+      <%= link_to manage_leaderboards_path do %>
+        <span class="glyphicon glyphicon-plus"></span>
+      <% end%>
+    </li>
+  </ul>
+
+  <div class="tab-content card">
+    <div class="tab-pane active" id="panel-general" role="tabpanel">
+      <%= render 'leaderboard', board: @general_board %>
+    </div>
+    <% @boards.each do |board| %>
+      <div class="tab-pane" id="panel-<%= board.title.parameterize %>" role="tabpanel">
+        <%= render 'leaderboard', board: board %>
+      </div>
+    <% end %>
+  </div>
+
+</div>

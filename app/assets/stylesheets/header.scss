@@ -1,0 +1,88 @@
+$white: #FFFFFF;
+$black: #000000;
+$gray: #ECECEC;
+$blue: #0B252F;
+$skyblue: #0B7085;
+$titles: #0B252F;
+$link: #0B7085;
+$link-hover: #F00;
+
+// Header
+#navbar-top {
+  background: image-url('background-header.jpg') no-repeat center center;
+  background-size: cover;
+  border: 0px;
+  border-radius: 0px;
+  margin-bottom: 0px;
+}
+#navbar-top .navbar-brand {
+  height: 140px;
+  display: flex;
+  align-items: center;
+}
+#navbar-top .logo {
+  height: 140px;
+}
+
+#navbar-top .user-img {
+  border-radius: 10px 0px 0px 10px;
+  height: 40px;
+}
+
+#header-menu {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #FFF;
+  background-color: $blue;
+  border-radius: 10px 10px 10px 10px;
+  margin: 20px 0px;
+  height: 40px;
+}
+#header-menu .user-name {
+  margin-left: 5px;
+  margin-right: 10px;
+}
+#header-menu a {
+  color: #FFF;
+}
+#header-menu a:hover {
+  color: #F00;
+}
+
+// Menu
+#navbar-menu {
+  background-color: $blue;
+  border: 0px;
+  border-radius: 0px;
+  margin-bottom: 0px;
+}
+#navbar-menu .nav  {
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+#navbar-menu .navbar-nav > li > a {
+  color: #FFF;
+}
+#navbar-menu .navbar-nav > li > a:hover {
+  color: #F00;
+}
+#navbar-menu .navbar-nav > li.active a {
+  background-color: $skyblue;
+}
+#navbar-menu .navbar-nav > li.active a:hover {
+  color: #FFF;
+}
+
+
+.invitations-warning {
+  background-color: #F00;
+  color: #FFF;
+  padding: 2px 4px;
+  min-width: 16px;
+  height: 18px;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 5px;
+}

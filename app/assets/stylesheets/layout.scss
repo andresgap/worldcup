@@ -1,0 +1,46 @@
+// Colors
+$white: #FFFFFF;
+$black: #000000;
+$gray: #ECECEC;
+$blue: #0B252F;
+$skyblue: #0B7085;
+$titles: #0B252F;
+$link: #0B7085;
+$link-hover: #F00;
+
+html, body {
+  height: 100%;
+  min-height: 100%;
+}
+
+body {
+  background: none;
+  font-family: 'Lato', sans-serif;
+}
+
+a {
+  color: $link;
+  text-decoration: none;
+  outline: 0 none;
+  &:focus, &:hover, &:active {
+    color: $link-hover;
+    text-decoration: none;
+    outline: 0 none;
+  }
+}
+
+.page {
+  min-height: calc(100% - 230px);
+}
+
+// Alerts
+div.alert {
+  margin: 0px;
+  border-radius: 0px;
+}
+
+.title {
+  color: $titles;
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+}

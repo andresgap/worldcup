@@ -1,0 +1,24 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "layout";
+
+body {
+  background: image-url('backgroundb.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+#signout-page .logo {
+  margin-top: 80px;
+  margin-bottom: 30px;
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 350px;
+  height: 350px;
+}
+
+#signout-page .signin-btn {
+  background: url('signin-btn.png');
+}
+#signout-page .signin-btn:hover {
+  background: url('signin-btn-hover.png');
+}

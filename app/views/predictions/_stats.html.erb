@@ -1,0 +1,34 @@
+<%
+  team1 = match.team1 ? match.team1.name : match.team1_label
+  team2 = match.team2 ? match.team2.name : match.team2_label
+  data = {
+    labels: [],
+    datasets: [{
+      data: [stats.team1, stats.tie, stats.team2],
+      backgroundColor: [
+        "#60BD68",
+        "#DECF3F",
+        "#F15854"
+      ],
+      label: ''
+    }],
+    labels: [
+      "#{format_number(stats.team1)}% #{team1}",
+      "#{format_number(stats.tie)}% Tie",
+      "#{format_number(stats.team2)}% #{team2}"
+    ]
+  }
+  options = {
+    responsive: false,
+    width: 300,
+    height: 80,
+    legend: {
+      position: 'left'
+    }
+  }
+%>
+
+<div class="chart-box">
+  <div class="chart-title">Match forecast based on users predictions</div>
+  <%= pie_chart(data, options) %>
+</div>

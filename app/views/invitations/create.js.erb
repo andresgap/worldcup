@@ -1,0 +1,8 @@
+$("div.errors").html("")
+<% if @invitation.errors.any? %>
+  <% @invitation.errors.full_messages.each do |message| %>
+    $("div.errors").append($("<div class='alert alert-danger'/>").html("<%= message.html_safe %>"));
+  <% end %>
+<% else %>
+  $("#leaderboards-manage-modal").modal("hide");
+<% end %>

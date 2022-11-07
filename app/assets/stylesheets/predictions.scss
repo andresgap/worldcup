@@ -1,0 +1,81 @@
+
+
+input.score {
+  width: 45px;
+  text-align: center;
+  border: 1px solid #BBB;
+  font-size: 14px;
+  height: 30px;
+}
+input.score[disabled=disabled] {
+  background-color: #CCC;
+}
+
+.team-selector {
+  width: 150px;
+  font-size: 14px;
+  height: 30px;
+  border: 1px solid #BBB;
+}
+
+#predictions-table {
+  margin: 0px auto;
+}
+
+#predictions-table .flag {
+  margin: 0px 5px;
+  border: 1px solid #BBB;
+  height: 30px;
+  width: 44px;
+}
+
+#predictions-table td {
+  line-height: 30px;
+}
+
+#predictions-table .closing {
+  background-color: #FCC;
+}
+
+#predictions-table .score-label {
+  min-width: 60px;
+}
+
+#predictions-list .submit-button {
+  margin-top: 30px;
+}
+
+td.chevron {
+  cursor: pointer;
+}
+
+td.stats {
+  text-align: center;
+  background-color: #FFF;
+}
+
+td.stats .chart {
+  display: inline-block !important;
+}
+
+td.stats .chart-box .chart-title {
+  font-size: 12px;
+}
+
+td.points {
+}
+td.points .green {
+  color: green;
+}
+
+td.points .red {
+  color: red;
+}
+
+#predictions-table td.phase-title {
+  font-size: 12px;
+  font-weight: bold;
+  background-color: #DDD;
+  line-height: 20px !important;
+  padding: 0px 10px !important;
+}
