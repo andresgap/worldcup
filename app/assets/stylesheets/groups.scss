@@ -2,8 +2,19 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 #group-table .flag {
-    margin: 0px 5px;
-    border: 1px solid #BBB;
-    height: 30px;
-    width: 44px;
-  }
+  margin: 0px 5px;
+  border: 1px solid #BBB;
+  height: 30px;
+  width: 44px;
+}
+
+#group-table .column {
+  width: 50px;
+}
+
+
+#group-table .team {
+   width: 200px;
+}
+
+
