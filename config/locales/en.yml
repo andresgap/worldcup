@@ -2,6 +2,7 @@ en:
   title: 'Quiniela'
   error:
     unauthorized: 'Access Denied'
+    account: 'Access Denied. Use a valid @growthaccelerationpartners.com email account.'
 
   form:
     error: 'There are errors updating the predictions.'
