@@ -81,4 +81,7 @@ test:
 #
 production:
   <<: *default
-  url: <%= ENV["WORLDCUP_DATABASE_URL"] %>
+  database: worldcup_production
+  username: worldcup
+  password: <%= ENV["WORLDCUP_DATABASE_PASSWORD"] %>
+  #url: <%= ENV["WORLDCUP_DATABASE_URL"] %>

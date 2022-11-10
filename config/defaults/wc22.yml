@@ -1,8 +1,9 @@
 admins:
-  - email: 'ahernandez@growthaccelerationpartners.com'
-  - email: 'cabarca@growthaccelerationpartners.com'
-  - email: 'davalos@growthaccelerationpartners.com'
-  - email: 'masanchez@growthaccelerationpartners.com'
+  # - email: 'ahernandez@growthaccelerationpartners.com'
+  # - email: 'cabarca@growthaccelerationpartners.com'
+  # - email: 'davalos@growthaccelerationpartners.com'
+  # - email: 'masanchez@growthaccelerationpartners.com'
+  - email: 'andrez47@gmail.com'
 phases:
   - code: 'A'
     level: 1

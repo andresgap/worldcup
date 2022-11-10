@@ -1,11 +1,11 @@
 class AuthenticationController < Devise::OmniauthCallbacksController
 
   def google_oauth2
-    if company_user?
+    #if company_user?
       valid_user? ? authorize : no_authorize(I18n.t('error.unauthorized'))
-    else
-      no_authorize(I18n.t('error.account'))
-    end
+    #else
+    #  no_authorize(I18n.t('error.account'))
+    #end
   end
 
   def facebook
